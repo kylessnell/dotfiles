@@ -14,6 +14,7 @@ Plug 'tpope/vim-fugitive'  "git
 Plug 'tpope/vim-repeat'  "repeat custom commands
 Plug 'tpope/vim-surround'  "repeat custom commands
 Plug 'scrooloose/nerdtree' "filesystem explorer
+Plug 'Xuyuanp/nerdtree-git-plugin' "git status for NERDTree
 Plug 'scrooloose/nerdcommenter' "easy commenting
 Plug 'vim-airline/vim-airline' "status bar
 
@@ -60,6 +61,9 @@ au BufRead,BufNewFile *.rake,*.rabl,*.jbuilder setf ruby
 
 set laststatus=2
 
+" Display extra whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
+
 " Misc
 set noswapfile
 set nobackup
@@ -78,6 +82,9 @@ set wildmode=list:longest,full
 " Show me where 80 chars is
 set colorcolumn=80
 hi ColorColumn ctermbg=235 guibg=#2c2d27
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
 
 """""""""""""""""""""""""
 " Keybindings
