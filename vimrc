@@ -143,6 +143,15 @@ function! RenameFile()
 endfunction
 nnoremap <Leader>n :call RenameFile()<cr>
 
+function! StripWhitespace()
+  let save_cursor = getpos(".")
+  let old_query = getreg('/')
+  :%s/\s\+$//e
+  call setpos('.', save_cursor)
+  call setreg('/', old_query)
+endfunction
+noremap <leader>ss :call StripWhitespace()<CR>
+
 if filereadable(expand("~/.custom.vim"))
   source ~/.custom.vim
 endif
