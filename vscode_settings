@@ -1,0 +1,71 @@
+{
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before":["<C-w>, l"],
+            "after":["<C-l>"],
+            "commands": [
+                {
+                    "command": ":nohl",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "editor.minimap.enabled": false,
+    "workbench.editor.enablePreview": false,
+    "window.zoomLevel": 0,
+    "window.title": "${activeEditorLong}",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.hovers.enabled": false,
+    "gitlens.recentChanges.highlight.locations": [
+        "gutter",
+    ],
+    "gitlens.blame.highlight.locations": [
+        "gutter"
+    ],
+    "gitlens.codeLens.enabled": false,
+    "python.linting.pycodestyleEnabled": false,
+    "python.linting.pycodestyleArgs": [
+        "--ignore=E501"
+    ],
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "python.linting.flake8Args": [
+        "--ignore=E501"
+    ],
+    "python.linting.enabled": false,
+    "gitlens.historyExplorer.enabled": true,
+    "sync.gist": "f327d68cc30ee7d2f46f8b01a03bb945",
+    "sync.quietSync": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.forceDownload": false,
+    "window.openFoldersInNewWindow": "on",
+    "python.venvPath": "~/.virtualenvs",
+    "vim.disableExtension": false,
+    "breadcrumbs.enabled": true,
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "editor.renderWhitespace": "boundary",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "explorer.confirmDelete": false,
+    "liveshare.featureSet": "insiders",
+    "files.autoSave": "onFocusChange",
+    "terminal.integrated.rendererType": "dom",
+    "workbench.colorTheme": "Seti Monokai",
+    "editor.renderLineHighlight": "none"
+}
+

@@ -17,6 +17,8 @@ Plug 'scrooloose/nerdtree' "filesystem explorer
 Plug 'Xuyuanp/nerdtree-git-plugin' "git status for NERDTree
 Plug 'scrooloose/nerdcommenter' "easy commenting
 Plug 'vim-airline/vim-airline' "status bar
+Plug 'SirVer/ultisnips' "code snippets engine
+Plug 'honza/vim-snippets' "code snippets
 
 " gists
 Plug 'mattn/gist-vim'
@@ -33,6 +35,9 @@ Plug 'junegunn/vim-xmark', { 'do': 'make' }
 
 " scss
 Plug 'cakebaker/scss-syntax.vim'
+
+" django
+Plug 'jmcomets/vim-pony'
 
 call plug#end()
 
@@ -55,6 +60,11 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set shiftround " When at 3 spaces and I hit >>, go to 4, not 5.
+
+" Set tabs to 4 spaces for python files
+autocmd FileType python set sw=4
+autocmd FileType python set ts=4
+autocmd FileType python set sts=4
 
 au BufRead,BufNewFile *.md setf markdown
 au BufRead,BufNewFile *.rake,*.rabl,*.jbuilder setf ruby
@@ -129,6 +139,11 @@ nnoremap <silent> <Leader>s :Sexplore<cr>
 " NERDTree
 nnoremap <C-g> :NERDTreeToggle<cr>
 nnoremap <C-f> :NERDTreeFind<cr>
+
+" ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 vnoremap s :!sort<CR>
 
