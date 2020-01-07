@@ -17,7 +17,6 @@ Plug 'scrooloose/nerdtree' "filesystem explorer
 Plug 'Xuyuanp/nerdtree-git-plugin' "git status for NERDTree
 Plug 'scrooloose/nerdcommenter' "easy commenting
 Plug 'vim-airline/vim-airline' "status bar
-Plug 'SirVer/ultisnips' "code snippets engine
 Plug 'honza/vim-snippets' "code snippets
 
 " gists
