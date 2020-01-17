@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Ask for the administrator password upfront
 sudo -v
@@ -295,3 +295,10 @@ for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
   killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+
+###############################################################################
+# Sublime Text 3
+###############################################################################
+
+defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+

@@ -56,6 +56,9 @@ function termins() {
     set +e
 }
 
+# Enable Pipenv autocomplete
+eval "$(pipenv --completion)"
+
 # Test utils
 
 function premetest() {
@@ -66,3 +69,11 @@ function premetestX() {
   django-admin test $1 --verbosity 2 --settings $TESTING_DJANGO_SETTINGS_MODULE $2
 }
 
+# Kiex
+
+[[ -s "$HOME/.kiex/scripts/kiex" ]] && source "$HOME/.kiex/scripts/kiex"
+
+# Use Homebrew Vim
+
+alias vi=/usr/local/bin/vim
+alias vim=/usr/local/bin/vim

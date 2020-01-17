@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab' "tab completion
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "fuzzy finder
 Plug 'junegunn/fzf.vim' "finder vim bindings
+Plug 'dyng/ctrlsf.vim' "another fuzzy finder
 Plug 'nviennot/molokai' "colors
 Plug 'tpope/vim-endwise' "end blocks
 Plug 'tpope/vim-fugitive'  "git
@@ -130,6 +131,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 nnoremap <silent> <leader>f :Files<cr>
 nnoremap <silent> <Leader>h :History<cr>
 nnoremap <Leader>a :Ag
+nnoremap <Leader>r :Rg
 
 " open netrw
 nnoremap <silent> <Leader>v :Vexplore<cr>
@@ -139,10 +141,16 @@ nnoremap <silent> <Leader>s :Sexplore<cr>
 nnoremap <C-g> :NERDTreeToggle<cr>
 nnoremap <C-f> :NERDTreeFind<cr>
 
+" copy buffer path
+nnoremap cp :let @*=expand('%:p:.:gs?/?\.?')<cr>
+
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" flake8
+autocmd BufWritePost *.py call Flake8()
 
 vnoremap s :!sort<CR>
 
