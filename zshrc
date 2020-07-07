@@ -1,8 +1,7 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Prezto
-
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # Kuberenetes/kubectl utils
 
@@ -59,6 +58,9 @@ function termins() {
 # Enable Pipenv autocomplete
 eval "$(pipenv --completion)"
 
+# Enable direnv
+eval "$(direnv hook zsh)"
+
 # Test utils
 
 function premetest() {
@@ -77,3 +79,12 @@ function premetestX() {
 
 alias vi=/usr/local/bin/vim
 alias vim=/usr/local/bin/vim
+
+# SLI
+#
+source /usr/local/bin/sli_zsh_completer.sh
+
+# GIT
+function gpc {
+    git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
+}

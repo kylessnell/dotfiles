@@ -9,8 +9,8 @@ editor = vim
 excludesfile = /opt/boxen/config/git/gitignore
 
 [user]
-name = Your Name
-email = Your Email
+name = Kyle Snell
+email = kylessnell@gmail.com
 
 [push]
 default = simple
@@ -31,16 +31,6 @@ ls = ls-files
 [branch]
 autosetuprebase = always
 
-[core]
-editor = vim
-excludesfile = /opt/boxen/config/git/gitignore
-
-[hub]
-protocol = https
-
-[push]
-default = simple
-
 [ui]
 color = auto
 
@@ -60,3 +50,5 @@ remote = green
 added = yellow
 changed = green
 untracked = cyan
+[pager]
+	branch = false

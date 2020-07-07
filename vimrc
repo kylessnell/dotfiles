@@ -19,6 +19,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin' "git status for NERDTree
 Plug 'scrooloose/nerdcommenter' "easy commenting
 Plug 'vim-airline/vim-airline' "status bar
 Plug 'honza/vim-snippets' "code snippets
+Plug 'chiel92/vim-autoformat' "formatter
 
 " gists
 Plug 'mattn/gist-vim'
@@ -177,3 +178,18 @@ noremap <leader>ss :call StripWhitespace()<CR>
 if filereadable(expand("~/.custom.vim"))
   source ~/.custom.vim
 endif
+
+function! DoPrettyXML()
+  let l:origft = &ft
+  set ft=
+  1s/<?xml .*?>//e
+  0put ='<PrettyXML>'
+  $put ='</PrettyXML>'
+  silent %!xmllint --format -
+  2d
+  $d
+  silent %<
+  1
+  exe "set ft=" . l:origft
+endfunction
+command! PrettyXML call DoPrettyXML()
